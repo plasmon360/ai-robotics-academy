@@ -15,7 +15,7 @@ Weeks 1–6 fundamentals; 7–10 control; 11–14 ROS 2; 15–18 perception; 19�
 
 In GitHub Settings → Pages, select **Deploy from a branch**, branch `main`, folder `/(root)`. Default public URL after publication: `https://plasmon360.github.io/ai-robotics-academy/`.
 
-**Important:** GitHub Pages custom domains are hostname-based. To serve this site specifically at `https://balajuluri.com/robotics/`, configure a `/robotics/` path on the hosting service already serving `balajuluri.com` (for example, by copying the four site files into that path or adding an appropriate reverse-proxy route). Do not replace your root domain's DNS just for this project.
+**Important:** GitHub Pages custom domains are hostname-based. To serve this site specifically at `https://balajuluri.com/robotics_academy/`, configure a `/robotics_academy/` path on the hosting service already serving `balajuluri.com` (for example, by copying the four site files into that path or adding an appropriate reverse-proxy route). Do not replace your root domain's DNS just for this project.
 
 ## Sources and attribution
 
