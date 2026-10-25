@@ -1,26 +1,42 @@
-# AI Robotics Academy
+# AI Robotics Academy 2.0
 
-A 36-week, **8 hours/week** (288-hour) self-study curriculum progressing from robotics fundamentals to ML policies, VLA fine-tuning and physical robotic arm deployment.
+An open, self-paced robotics course for an engineer with an AI/Python background.
 
-- **Course cost:** free linked lectures, documentation and tutorials.
-- **Hardware target:** $300–$700. Verify SO-101 leader/follower kit prices and accessories before ordering.
-- **Website:** static HTML/CSS/JS, no build tools or backend.
-- **Daily progress:** browser localStorage (per browser/device).
-- **Detailed first assignment:** [Week 1](assignments/week01.md).
+**36-week roadmap · 8 modules · 30 interactive lessons · 30 Python lab prompts · 30 quizzes · 288 hours of planned study.**
+
+## Website
+
+Custom domain: **https://robotics-academy.balajuluri.com/**
+
+The `CNAME` file is configured. Publishing also requires GitHub Pages enabled on the `main` branch and a CNAME DNS record at your DNS provider pointing `robotics-academy` to `plasmon360.github.io`. DNS and HTTPS verification may take time.
+
+## Features
+
+- **Interactive lessons:** eight modules, 30 lessons with learning objectives, reading links, guided steps, Python lab prompts and multiple-choice knowledge checks.
+- **Progress dashboard:** lessons, labs, quizzes and 36-week study sessions.
+- **Personal notes:** editable notes per lesson, saved automatically in browser localStorage.
+- **Search:** filter lessons by title.
+- **Roadmap:** 36 weeks of daily study sessions (five sessions per week, eight hours total).
+- **Resources:** a browsable library of free lectures, documentation and source repositories.
+- **Detailed Week 1 assignment:** [Robot DOF and forward kinematics](assignments/week01.md).
+
+**Scope note:** Labs are currently guided assignments, not in-browser Python execution or auto-graded coding tests. Quiz checks run in-browser. Only Week 1 has a full standalone assignment; other lessons have lab prompts and study steps. Progress is local to each browser/device.
 
 ## Curriculum
-Weeks 1–6 fundamentals; 7–10 control; 11–14 ROS 2; 15–18 perception; 19–23 robot learning; 24–27 embodied AI; 28–32 physical hardware; 33–36 deployment.
 
-## Hosting
+1. Foundations — frames, DOF, rotations, Jacobians, simulators.
+2. Dynamics & Control — robot dynamics, PID, RRT, SLAM.
+3. Perception — camera calibration, 6D pose, Kalman filtering.
+4. ROS 2 — nodes, TF2, URDF, MoveIt, Nav2 and simulation ecosystems.
+5. Reinforcement Learning — MDPs, PPO, SAC, domain randomization.
+6. Imitation Learning — BC, DAgger, ACT, diffusion policies, LeRobot.
+7. VLA — VLM action heads, datasets, SmolVLA fine-tuning, RL adaptation.
+8. Capstone — simulated fetch task, evaluation, safety and SO-101 deployment planning.
 
-In GitHub Settings → Pages, select **Deploy from a branch**, branch `main`, folder `/(root)`. Default public URL after publication: `https://plasmon360.github.io/ai-robotics-academy/`.
+## Run locally
 
-**Important:** GitHub Pages custom domains are hostname-based. To serve this site specifically at `https://balajuluri.com/robotics_academy/`, configure a `/robotics_academy/` path on the hosting service already serving `balajuluri.com` (for example, by copying the four site files into that path or adding an appropriate reverse-proxy route). Do not replace your root domain's DNS just for this project.
+Open `index.html` in a modern browser. No build tools or backend required.
 
-## Sources and attribution
+## Sources and license
 
-All source URLs are listed in `course.js`, including MIT OCW, Northwestern Modern Robotics, MIT Underactuated, ROS 2, MuJoCo, MoveIt 2, OpenCV, PyTorch, Hugging Face LeRobot and SO-101. Third-party content remains owned/licensed by its respective authors. Verify external links and changing APIs as you progress.
-
-## Scope
-
-Weeks 2–36 provide structured daily study sessions and curated primary/secondary sources; Week 1 contains the fully detailed assignment. Expand later weekly labs as you progress. 
+All external resources are linked from `course.js`, including Northwestern Modern Robotics, MIT OCW, ROS 2, MuJoCo, MoveIt 2, OpenCV, PyTorch, Gymnasium, Hugging Face LeRobot and SO-101. Linked material belongs to its respective authors. The course website is intended as an original study guide, not a reproduction of third-party course content.
