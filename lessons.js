@@ -57,7 +57,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Build a minimal 2-joint arm model and label observations versus actions.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "IIT Kanpur — Lecture 02: Robot Joints and Work Volume",
+      "url": "https://nptel.ac.in/courses/112104298",
+      "type": "lecture-index",
+      "note": "Find the named lecture in the official NPTEL course index; direct video URL not verified."
+    }
   },
   {
     "id": "m1l2",
@@ -82,7 +88,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Use NumPy to transform a 2D point between world, base and tool frames.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "IIT Kanpur — Lectures 03–04: Spatial and Homogeneous Transformations",
+      "url": "https://nptel.ac.in/courses/112104298",
+      "type": "lecture-index",
+      "note": "Find the named lecture in the official NPTEL course index; direct video URL not verified."
+    }
   },
   {
     "id": "m1l3",
@@ -107,7 +119,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Plot the tip of a two-link arm over a grid of joint angles.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "IIT Kanpur — Lecture 07: Forward Kinematics",
+      "url": "https://nptel.ac.in/courses/112104298",
+      "type": "lecture-index",
+      "note": "Find the named lecture in the official NPTEL course index; direct video URL not verified."
+    }
   },
   {
     "id": "m1l4",
@@ -132,7 +150,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Implement a proportional controller that moves a simulated joint toward a target.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "IIT Kanpur — Lecture 18: Control of a Single Joint",
+      "url": "https://nptel.ac.in/courses/112104298",
+      "type": "lecture-index",
+      "note": "Find the named lecture in the official NPTEL course index; direct video URL not verified."
+    }
   },
   {
     "id": "m2l1",
@@ -157,7 +181,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Load a simple arm model, inspect joints and step the simulator.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "MuJoCo Tutorial — Trossen Robotics",
+      "url": "https://www.youtube.com/watch?v=CfE8tC7p3vs",
+      "type": "video",
+      "note": "Introductory simulation overview; use the official documentation for the hands-on task."
+    }
   },
   {
     "id": "m2l2",
@@ -182,7 +212,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Modify joint limits, actuator gains and sensor readings in a MuJoCo model.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "MuJoCo Tutorial — Trossen Robotics",
+      "url": "https://www.youtube.com/watch?v=CfE8tC7p3vs",
+      "type": "video",
+      "note": "Introductory simulation overview; use the official documentation for the hands-on task."
+    }
   },
   {
     "id": "m2l3",
@@ -207,7 +243,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Implement reset(), step(), observation, action, reward and termination.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "MuJoCo Tutorial — Trossen Robotics",
+      "url": "https://www.youtube.com/watch?v=CfE8tC7p3vs",
+      "type": "video",
+      "note": "Introductory simulation overview; use the official documentation for the hands-on task."
+    }
   },
   {
     "id": "m2l4",
@@ -232,7 +274,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Compare random, scripted and proportional policies on the same reaching task.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "MuJoCo Tutorial — Trossen Robotics",
+      "url": "https://www.youtube.com/watch?v=CfE8tC7p3vs",
+      "type": "video",
+      "note": "Introductory simulation overview; use the official documentation for the hands-on task."
+    }
   },
   {
     "id": "m3l1",
@@ -457,7 +505,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Solve a planar 2R inverse-kinematics problem and test reachable targets.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "IIT Kanpur — Lecture 08: Inverse Kinematics",
+      "url": "https://nptel.ac.in/courses/112104298",
+      "type": "lecture-index",
+      "note": "Find the named lecture in the official NPTEL course index; direct video URL not verified."
+    }
   },
   {
     "id": "m5l2",
@@ -482,7 +536,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Interpolate a joint-space path and reject collisions in simulation.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "IIT Kanpur — Lecture 14: Trajectory Planning",
+      "url": "https://nptel.ac.in/courses/112104298",
+      "type": "lecture-index",
+      "note": "Find the named lecture in the official NPTEL course index; direct video URL not verified."
+    }
   },
   {
     "id": "m5l3",
@@ -557,7 +617,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Record observations, actions and timestamps for a scripted reaching policy.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m6l2",
@@ -582,7 +648,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Train a small neural policy to predict expert actions from observations.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m6l3",
@@ -607,7 +679,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Split demonstrations by episode and evaluate on unseen initial states.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m6l4",
@@ -632,7 +710,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Inspect a LeRobot dataset, configure training and evaluate a policy in simulation.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m7l1",
@@ -657,7 +741,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Trace image, language instruction and proprioception through a VLA policy.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m7l2",
@@ -682,7 +772,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Inspect model inputs, outputs and normalization on a sample dataset.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m7l3",
@@ -707,7 +803,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Plan a small fine-tuning experiment and compare held-out task success.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m8l1",
@@ -732,7 +834,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Write a setup checklist covering calibration, workspace limits and emergency stop.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m8l2",
@@ -757,7 +865,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Connect observations to a tested policy and send bounded actions to the arm.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   },
   {
     "id": "m8l3",
@@ -782,6 +896,12 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Run repeated pick-and-place trials; publish success rate, failure analysis and a demo.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
+      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
+      "type": "video",
+      "note": "General workflow overview; not a lesson-specific deep dive."
+    }
   }
 ];
