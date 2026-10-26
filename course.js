@@ -1,1290 +1,1324 @@
+// Free learning references and 36-week build-first schedule.
 const SOURCES={
-  "Modern Robotics textbook": "https://hades.mech.northwestern.edu/index.php/Modern_Robotics",
-  "Modern Robotics Chapter 2": "https://modernrobotics.northwestern.edu/chapters/chapter2/",
+  "NPTEL Robotics (IIT Kharagpur)": "https://nptel.ac.in/courses/112105249",
+  "NPTEL Introduction to Robotics (IIT Kanpur)": "https://nptel.ac.in/courses/112104298",
+  "NPTEL Introduction to Robotics (IIT Madras)": "https://nptel.ac.in/courses/107106090",
   "Modern Robotics Chapter 3": "https://modernrobotics.northwestern.edu/chapters/chapter3/",
   "Modern Robotics Chapter 4": "https://modernrobotics.northwestern.edu/chapters/chapter4/",
-  "Modern Robotics Chapter 5": "https://modernrobotics.northwestern.edu/chapters/chapter5/",
   "Modern Robotics Chapter 6": "https://modernrobotics.northwestern.edu/chapters/chapter6/",
-  "Modern Robotics Chapter 8": "https://modernrobotics.northwestern.edu/chapters/chapter8/",
-  "Modern Robotics Chapter 9": "https://modernrobotics.northwestern.edu/chapters/chapter9/",
-  "Modern Robotics Chapter 10": "https://modernrobotics.northwestern.edu/chapters/chapter10/",
-  "Modern Robotics Chapter 11": "https://modernrobotics.northwestern.edu/chapters/chapter11/",
-  "MIT Robotics": "https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/",
-  "MIT Robotics Chapter 1": "https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/resources/chapter1/",
-  "MIT Underactuated Robotics": "https://underactuated.mit.edu/",
-  "ROS 2 tutorials": "https://docs.ros.org/en/rolling/Tutorials.html",
-  "ROS 2 URDF": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/URDF-Main.html",
-  "MoveIt 2": "https://moveit.picknik.ai/main/doc/tutorials/tutorials.html",
-  "MuJoCo": "https://mujoco.readthedocs.io/en/stable/overview.html",
-  "Gymnasium": "https://gymnasium.farama.org/",
-  "OpenCV": "https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html",
-  "PyTorch": "https://docs.pytorch.org/tutorials/",
-  "LeRobot": "https://huggingface.co/docs/lerobot/index",
+  "Gymnasium documentation": "https://gymnasium.farama.org/",
+  "Gymnasium custom environments": "https://gymnasium.farama.org/tutorials/gymnasium_basics/environment_creation/",
+  "MuJoCo documentation": "https://mujoco.readthedocs.io/en/stable/overview.html",
+  "MuJoCo Python": "https://mujoco.readthedocs.io/en/stable/python.html",
+  "Sutton and Barto RL book": "http://incompleteideas.net/book/the-book-2nd.html",
+  "Stable-Baselines3 PPO": "https://stable-baselines3.readthedocs.io/en/master/modules/ppo.html",
+  "Stable-Baselines3 SAC": "https://stable-baselines3.readthedocs.io/en/master/modules/sac.html",
+  "Stable-Baselines3 guide": "https://stable-baselines3.readthedocs.io/en/master/guide/rl_tips.html",
+  "Spinning Up SAC": "https://spinningup.openai.com/en/latest/algorithms/sac.html",
+  "OpenCV camera calibration": "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
+  "OpenCV tutorials": "https://docs.opencv.org/4.x/d6/d00/tutorial_py_root.html",
+  "PyTorch tutorials": "https://docs.pytorch.org/tutorials/",
+  "MoveIt 2 tutorials": "https://moveit.picknik.ai/main/doc/tutorials/tutorials.html",
+  "LeRobot documentation": "https://huggingface.co/docs/lerobot/index",
+  "LeRobot datasets": "https://huggingface.co/datasets?other=LeRobot",
   "LeRobot source": "https://github.com/huggingface/lerobot",
   "SmolVLA": "https://huggingface.co/lerobot/smolvla_base",
-  "SO-101 hardware": "https://github.com/TheRobotStudio/SO-ARM100",
-  "LeRobot datasets": "https://huggingface.co/datasets?other=LeRobot",
-  "NumPy": "https://numpy.org/doc/stable/",
-  "Matplotlib animation": "https://matplotlib.org/stable/api/animation_api.html"
+  "SO-101 hardware": "https://github.com/TheRobotStudio/SO-ARM100"
 };
 const COURSE=[
   {
     "week": 1,
-    "phase": "Fundamentals",
-    "title": "Rigid bodies, DOF and joints",
-    "primary": "Modern Robotics Chapter 2",
-    "secondary": "MIT Robotics Chapter 1",
-    "deliverable": "Two-link arm simulator",
+    "phase": "Robotics Essentials",
+    "title": "Robot joints, state, actions and degrees of freedom",
+    "lessonId": "m1l1",
+    "primary": "NPTEL Robotics (IIT Kharagpur)",
+    "secondary": "Gymnasium documentation",
+    "deliverable": "Build a minimal 2-joint arm model and label observations versus actions.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Robot joints, state, actions and degrees of freedom. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Build a minimal 2-joint arm model and label observations versus actions."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 2,
-    "phase": "Fundamentals",
-    "title": "Rotation matrices and frames",
-    "primary": "Modern Robotics Chapter 3",
-    "secondary": "NumPy",
-    "deliverable": "3D frame visualizer",
+    "phase": "Robotics Essentials",
+    "title": "Coordinate frames without the heavy math",
+    "lessonId": "m1l2",
+    "primary": "NPTEL Introduction to Robotics (IIT Kanpur)",
+    "secondary": "Modern Robotics Chapter 3",
+    "deliverable": "Use NumPy to transform a 2D point between world, base and tool frames.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Coordinate frames without the heavy math. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Use NumPy to transform a 2D point between world, base and tool frames."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 3,
-    "phase": "Fundamentals",
-    "title": "Homogeneous transformations",
-    "primary": "Modern Robotics Chapter 3",
-    "secondary": "NumPy",
-    "deliverable": "SE(3) transform library",
+    "phase": "Robotics Essentials",
+    "title": "Forward kinematics by building",
+    "lessonId": "m1l3",
+    "primary": "NPTEL Introduction to Robotics (IIT Kanpur)",
+    "secondary": "Modern Robotics Chapter 4",
+    "deliverable": "Plot the tip of a two-link arm over a grid of joint angles.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Forward kinematics by building. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Plot the tip of a two-link arm over a grid of joint angles."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 4,
-    "phase": "Fundamentals",
-    "title": "Forward kinematics",
-    "primary": "Modern Robotics Chapter 4",
-    "secondary": "Modern Robotics textbook",
-    "deliverable": "3D forward kinematics",
+    "phase": "Robotics Essentials",
+    "title": "Control loops and reaching tasks",
+    "lessonId": "m1l4",
+    "primary": "NPTEL Introduction to Robotics (IIT Kanpur)",
+    "secondary": "MuJoCo documentation",
+    "deliverable": "Implement a proportional controller that moves a simulated joint toward a target.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Control loops and reaching tasks. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Implement a proportional controller that moves a simulated joint toward a target."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 5,
-    "phase": "Fundamentals",
-    "title": "Inverse kinematics and Jacobians",
-    "primary": "Modern Robotics Chapter 6",
-    "secondary": "Modern Robotics Chapter 5",
-    "deliverable": "Numerical IK solver",
+    "phase": "Robot Simulation",
+    "title": "Load a robot in MuJoCo",
+    "lessonId": "m2l1",
+    "primary": "MuJoCo documentation",
+    "secondary": "MuJoCo Python",
+    "deliverable": "Load a simple arm model, inspect joints and step the simulator.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Load a robot in MuJoCo. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Load a simple arm model, inspect joints and step the simulator."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 6,
-    "phase": "Fundamentals",
-    "title": "MuJoCo simulation",
-    "primary": "MuJoCo",
-    "secondary": "Modern Robotics Chapter 4",
-    "deliverable": "Simulated robot arm",
+    "phase": "Robot Simulation",
+    "title": "Robot models, actuators and sensors",
+    "lessonId": "m2l2",
+    "primary": "MuJoCo documentation",
+    "secondary": "Gymnasium documentation",
+    "deliverable": "Modify joint limits, actuator gains and sensor readings in a MuJoCo model.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Robot models, actuators and sensors. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Modify joint limits, actuator gains and sensor readings in a MuJoCo model."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 7,
-    "phase": "Control",
-    "title": "Robot dynamics",
-    "primary": "Modern Robotics Chapter 8",
-    "secondary": "MIT Underactuated Robotics",
-    "deliverable": "Two-link dynamics notebook",
+    "phase": "Robot Simulation",
+    "title": "Create a Gymnasium reaching environment",
+    "lessonId": "m2l3",
+    "primary": "Gymnasium custom environments",
+    "secondary": "MuJoCo Python",
+    "deliverable": "Implement reset(), step(), observation, action, reward and termination.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Create a Gymnasium reaching environment. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Implement reset(), step(), observation, action, reward and termination."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 8,
-    "phase": "Control",
-    "title": "PID and feedback control",
-    "primary": "MIT Underactuated Robotics",
-    "secondary": "MuJoCo",
-    "deliverable": "Joint controller",
+    "phase": "Robot Simulation",
+    "title": "Debug simulation and evaluate baselines",
+    "lessonId": "m2l4",
+    "primary": "Gymnasium documentation",
+    "secondary": "MuJoCo documentation",
+    "deliverable": "Compare random, scripted and proportional policies on the same reaching task.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Debug simulation and evaluate baselines. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Compare random, scripted and proportional policies on the same reaching task."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 9,
-    "phase": "Control",
-    "title": "Trajectory generation",
-    "primary": "Modern Robotics Chapter 9",
-    "secondary": "MuJoCo",
-    "deliverable": "Smooth trajectory planner",
+    "phase": "Reinforcement Learning for Robots",
+    "title": "MDPs, rewards and robot policies",
+    "lessonId": "m3l1",
+    "primary": "Sutton and Barto RL book",
+    "secondary": "Gymnasium documentation",
+    "deliverable": "Define state, action, transition and reward for reaching.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study MDPs, rewards and robot policies. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Define state, action, transition and reward for reaching."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 10,
-    "phase": "Control",
-    "title": "Integrated robot control",
-    "primary": "Modern Robotics Chapter 11",
-    "secondary": "MIT Underactuated Robotics",
-    "deliverable": "Trajectory tracking demo",
+    "phase": "Reinforcement Learning for Robots",
+    "title": "MDPs, rewards and robot policies",
+    "lessonId": "m3l1",
+    "primary": "Sutton and Barto RL book",
+    "secondary": "Gymnasium documentation",
+    "deliverable": "Define state, action, transition and reward for reaching.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study MDPs, rewards and robot policies. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Define state, action, transition and reward for reaching."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 11,
-    "phase": "Robotics software",
-    "title": "ROS 2 fundamentals",
-    "primary": "ROS 2 tutorials",
-    "secondary": "ROS 2 URDF",
-    "deliverable": "Publisher/subscriber demo",
+    "phase": "Reinforcement Learning for Robots",
+    "title": "Train a first policy with PPO",
+    "lessonId": "m3l2",
+    "primary": "Stable-Baselines3 PPO",
+    "secondary": "Gymnasium documentation",
+    "deliverable": "Train PPO on a simple continuous-control environment and plot learning curves.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Train a first policy with PPO. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Train PPO on a simple continuous-control environment and plot learning curves."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 12,
-    "phase": "Robotics software",
-    "title": "ROS 2 Python development",
-    "primary": "ROS 2 tutorials",
-    "secondary": "MuJoCo",
-    "deliverable": "Python robot state node",
+    "phase": "Reinforcement Learning for Robots",
+    "title": "Continuous control with SAC",
+    "lessonId": "m3l3",
+    "primary": "Stable-Baselines3 SAC",
+    "secondary": "Spinning Up SAC",
+    "deliverable": "Train SAC and compare sample efficiency and exploration with PPO.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Continuous control with SAC. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Train SAC and compare sample efficiency and exploration with PPO."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 13,
-    "phase": "Robotics software",
-    "title": "Robot modeling with URDF",
-    "primary": "ROS 2 URDF",
-    "secondary": "ROS 2 tutorials",
-    "deliverable": "Two-link URDF",
+    "phase": "Reinforcement Learning for Robots",
+    "title": "Reward shaping and failure analysis",
+    "lessonId": "m3l4",
+    "primary": "Sutton and Barto RL book",
+    "secondary": "Stable-Baselines3 guide",
+    "deliverable": "Test sparse versus dense reaching rewards; log reward hacking cases.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Reward shaping and failure analysis. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Test sparse versus dense reaching rewards; log reward hacking cases."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 14,
-    "phase": "Robotics software",
-    "title": "Motion planning",
-    "primary": "MoveIt 2",
-    "secondary": "ROS 2 tutorials",
-    "deliverable": "Simulated pick-and-place",
+    "phase": "Reinforcement Learning for Robots",
+    "title": "Observation design and domain randomization",
+    "lessonId": "m3l5",
+    "primary": "Gymnasium documentation",
+    "secondary": "MuJoCo documentation",
+    "deliverable": "Vary masses, camera noise and target positions; evaluate generalization.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Observation design and domain randomization. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Vary masses, camera noise and target positions; evaluate generalization."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 15,
-    "phase": "Perception",
-    "title": "Camera geometry",
-    "primary": "OpenCV",
-    "secondary": "NumPy",
-    "deliverable": "Camera projection notebook",
+    "phase": "Robot Perception",
+    "title": "Camera images and calibration basics",
+    "lessonId": "m4l1",
+    "primary": "OpenCV camera calibration",
+    "secondary": "NPTEL Introduction to Robotics (IIT Madras)",
+    "deliverable": "Capture images, inspect coordinate conventions and draw camera axes.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Camera images and calibration basics. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Capture images, inspect coordinate conventions and draw camera axes."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 16,
-    "phase": "Perception",
-    "title": "Camera calibration",
-    "primary": "OpenCV",
-    "secondary": "NumPy",
-    "deliverable": "Calibration experiment",
+    "phase": "Robot Perception",
+    "title": "Object detection and segmentation",
+    "lessonId": "m4l2",
+    "primary": "OpenCV tutorials",
+    "secondary": "PyTorch tutorials",
+    "deliverable": "Use OpenCV to locate a colored object and report its image centroid.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Object detection and segmentation. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Use OpenCV to locate a colored object and report its image centroid."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 17,
-    "phase": "Perception",
-    "title": "Object detection",
-    "primary": "OpenCV",
-    "secondary": "PyTorch",
-    "deliverable": "Block detection",
+    "phase": "Robot Perception",
+    "title": "Depth, pose and coordinate conversion",
+    "lessonId": "m4l3",
+    "primary": "OpenCV tutorials",
+    "secondary": "Modern Robotics Chapter 3",
+    "deliverable": "Back-project a depth pixel into 3D and transform it to a robot frame.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Depth, pose and coordinate conversion. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Back-project a depth pixel into 3D and transform it to a robot frame."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 18,
-    "phase": "Perception",
-    "title": "Vision-guided control",
-    "primary": "OpenCV",
-    "secondary": "MuJoCo",
-    "deliverable": "Vision-to-robot transform",
+    "phase": "Robot Perception",
+    "title": "Perception-driven reaching",
+    "lessonId": "m4l4",
+    "primary": "OpenCV tutorials",
+    "secondary": "MuJoCo Python",
+    "deliverable": "Build a simulated loop: detect target, estimate pose, command a reach.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Perception-driven reaching. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Build a simulated loop: detect target, estimate pose, command a reach."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 19,
-    "phase": "Robot learning",
-    "title": "Robot learning datasets",
-    "primary": "LeRobot",
-    "secondary": "LeRobot datasets",
-    "deliverable": "Dataset schema",
+    "phase": "Autonomous Manipulation",
+    "title": "Inverse kinematics for reaching",
+    "lessonId": "m5l1",
+    "primary": "NPTEL Introduction to Robotics (IIT Kanpur)",
+    "secondary": "Modern Robotics Chapter 6",
+    "deliverable": "Solve a planar 2R inverse-kinematics problem and test reachable targets.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Inverse kinematics for reaching. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Solve a planar 2R inverse-kinematics problem and test reachable targets."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 20,
-    "phase": "Robot learning",
-    "title": "Behavior cloning",
-    "primary": "LeRobot",
-    "secondary": "PyTorch",
-    "deliverable": "BC baseline",
+    "phase": "Autonomous Manipulation",
+    "title": "Motion planning and collision checks",
+    "lessonId": "m5l2",
+    "primary": "MoveIt 2 tutorials",
+    "secondary": "MuJoCo documentation",
+    "deliverable": "Interpolate a joint-space path and reject collisions in simulation.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Motion planning and collision checks. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Interpolate a joint-space path and reject collisions in simulation."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 21,
-    "phase": "Robot learning",
-    "title": "Action chunking and ACT",
-    "primary": "LeRobot source",
-    "secondary": "PyTorch",
-    "deliverable": "Action chunking experiment",
+    "phase": "Autonomous Manipulation",
+    "title": "Grasping and pick-and-place",
+    "lessonId": "m5l3",
+    "primary": "LeRobot documentation",
+    "secondary": "MuJoCo documentation",
+    "deliverable": "Build a pick-lift-place sequence with gripper open/close actions.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Grasping and pick-and-place. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Build a pick-lift-place sequence with gripper open/close actions."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 22,
-    "phase": "Robot learning",
-    "title": "Diffusion policies",
-    "primary": "LeRobot source",
-    "secondary": "PyTorch",
-    "deliverable": "Policy comparison notebook",
+    "phase": "Autonomous Manipulation",
+    "title": "Closed-loop autonomous manipulation",
+    "lessonId": "m5l4",
+    "primary": "MoveIt 2 tutorials",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Add recovery when an object moves or a grasp fails.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Closed-loop autonomous manipulation. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Add recovery when an object moves or a grasp fails."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 23,
-    "phase": "Robot learning",
-    "title": "Reinforcement learning",
-    "primary": "Gymnasium",
-    "secondary": "MIT Underactuated Robotics",
-    "deliverable": "RL control agent",
+    "phase": "Imitation Learning and LeRobot",
+    "title": "Collect robot demonstrations",
+    "lessonId": "m6l1",
+    "primary": "LeRobot documentation",
+    "secondary": "LeRobot datasets",
+    "deliverable": "Record observations, actions and timestamps for a scripted reaching policy.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Collect robot demonstrations. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Record observations, actions and timestamps for a scripted reaching policy."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 24,
-    "phase": "Embodied AI",
-    "title": "Vision-language-action basics",
-    "primary": "SmolVLA",
-    "secondary": "LeRobot",
-    "deliverable": "VLA architecture notes",
+    "phase": "Imitation Learning and LeRobot",
+    "title": "Collect robot demonstrations",
+    "lessonId": "m6l1",
+    "primary": "LeRobot documentation",
+    "secondary": "LeRobot datasets",
+    "deliverable": "Record observations, actions and timestamps for a scripted reaching policy.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Collect robot demonstrations. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Record observations, actions and timestamps for a scripted reaching policy."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 25,
-    "phase": "Embodied AI",
-    "title": "SmolVLA inference",
-    "primary": "SmolVLA",
-    "secondary": "LeRobot",
-    "deliverable": "Inference notebook",
+    "phase": "Imitation Learning and LeRobot",
+    "title": "Behavior cloning baseline",
+    "lessonId": "m6l2",
+    "primary": "PyTorch tutorials",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Train a small neural policy to predict expert actions from observations.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Behavior cloning baseline. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Train a small neural policy to predict expert actions from observations."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 26,
-    "phase": "Embodied AI",
-    "title": "VLA demonstration datasets",
+    "phase": "Imitation Learning and LeRobot",
+    "title": "Dataset quality and evaluation",
+    "lessonId": "m6l3",
     "primary": "LeRobot datasets",
-    "secondary": "LeRobot",
-    "deliverable": "Instruction dataset",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Split demonstrations by episode and evaluate on unseen initial states.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Dataset quality and evaluation. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Split demonstrations by episode and evaluate on unseen initial states."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 27,
-    "phase": "Embodied AI",
-    "title": "VLA fine-tuning",
-    "primary": "SmolVLA",
-    "secondary": "LeRobot",
-    "deliverable": "Simulation fine-tuning report",
+    "phase": "Imitation Learning and LeRobot",
+    "title": "LeRobot policy training workflow",
+    "lessonId": "m6l4",
+    "primary": "LeRobot documentation",
+    "secondary": "LeRobot source",
+    "deliverable": "Inspect a LeRobot dataset, configure training and evaluate a policy in simulation.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study LeRobot policy training workflow. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Inspect a LeRobot dataset, configure training and evaluate a policy in simulation."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 28,
-    "phase": "Physical robot",
-    "title": "SO-101 hardware planning",
-    "primary": "SO-101 hardware",
-    "secondary": "LeRobot",
-    "deliverable": "Budget and safety checklist",
+    "phase": "Foundation Models and VLA",
+    "title": "Vision-language-action model anatomy",
+    "lessonId": "m7l1",
+    "primary": "SmolVLA",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Trace image, language instruction and proprioception through a VLA policy.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Vision-language-action model anatomy. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Trace image, language instruction and proprioception through a VLA policy."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 29,
-    "phase": "Physical robot",
-    "title": "Assembly and calibration",
-    "primary": "SO-101 hardware",
-    "secondary": "LeRobot",
-    "deliverable": "Calibrated hardware",
+    "phase": "Foundation Models and VLA",
+    "title": "Vision-language-action model anatomy",
+    "lessonId": "m7l1",
+    "primary": "SmolVLA",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Trace image, language instruction and proprioception through a VLA policy.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Vision-language-action model anatomy. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Trace image, language instruction and proprioception through a VLA policy."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 30,
-    "phase": "Physical robot",
-    "title": "Teleoperation",
-    "primary": "LeRobot",
-    "secondary": "SO-101 hardware",
-    "deliverable": "Teleoperation workflow",
+    "phase": "Foundation Models and VLA",
+    "title": "Run and inspect SmolVLA",
+    "lessonId": "m7l2",
+    "primary": "SmolVLA",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Inspect model inputs, outputs and normalization on a sample dataset.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Run and inspect SmolVLA. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Inspect model inputs, outputs and normalization on a sample dataset."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 31,
-    "phase": "Physical robot",
-    "title": "Collecting demonstrations",
-    "primary": "LeRobot",
-    "secondary": "LeRobot datasets",
-    "deliverable": "Recorded robot dataset",
+    "phase": "Foundation Models and VLA",
+    "title": "Run and inspect SmolVLA",
+    "lessonId": "m7l2",
+    "primary": "SmolVLA",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Inspect model inputs, outputs and normalization on a sample dataset.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Run and inspect SmolVLA. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Inspect model inputs, outputs and normalization on a sample dataset."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 32,
-    "phase": "Physical robot",
-    "title": "Training physical policies",
-    "primary": "LeRobot",
-    "secondary": "PyTorch",
-    "deliverable": "Trained checkpoint",
+    "phase": "Foundation Models and VLA",
+    "title": "Adapt and evaluate a VLA policy",
+    "lessonId": "m7l3",
+    "primary": "SmolVLA",
+    "secondary": "LeRobot datasets",
+    "deliverable": "Plan a small fine-tuning experiment and compare held-out task success.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Adapt and evaluate a VLA policy. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Plan a small fine-tuning experiment and compare held-out task success."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 33,
-    "phase": "Deployment",
-    "title": "Robot inference pipeline",
-    "primary": "LeRobot",
-    "secondary": "SO-101 hardware",
-    "deliverable": "Physical policy demo",
+    "phase": "SO-101 Real-Robot Capstone",
+    "title": "SO-101 setup and safety",
+    "lessonId": "m8l1",
+    "primary": "SO-101 hardware",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Write a setup checklist covering calibration, workspace limits and emergency stop.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study SO-101 setup and safety. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Write a setup checklist covering calibration, workspace limits and emergency stop."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 34,
-    "phase": "Deployment",
-    "title": "Language-conditioned control",
-    "primary": "SmolVLA",
-    "secondary": "LeRobot",
-    "deliverable": "Instruction-following demo",
+    "phase": "SO-101 Real-Robot Capstone",
+    "title": "SO-101 setup and safety",
+    "lessonId": "m8l1",
+    "primary": "SO-101 hardware",
+    "secondary": "LeRobot documentation",
+    "deliverable": "Write a setup checklist covering calibration, workspace limits and emergency stop.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study SO-101 setup and safety. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Write a setup checklist covering calibration, workspace limits and emergency stop."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 35,
-    "phase": "Deployment",
-    "title": "Evaluation and robustness",
-    "primary": "LeRobot",
-    "secondary": "PyTorch",
-    "deliverable": "Success-rate benchmark",
+    "phase": "SO-101 Real-Robot Capstone",
+    "title": "Deploy a learned manipulation policy",
+    "lessonId": "m8l2",
+    "primary": "LeRobot documentation",
+    "secondary": "SO-101 hardware",
+    "deliverable": "Connect observations to a tested policy and send bounded actions to the arm.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Deploy a learned manipulation policy. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Connect observations to a tested policy and send bounded actions to the arm."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   },
   {
     "week": 36,
-    "phase": "Deployment",
-    "title": "Capstone: AI robotic arm",
-    "primary": "SmolVLA",
+    "phase": "SO-101 Real-Robot Capstone",
+    "title": "Capstone evaluation and demonstration",
+    "lessonId": "m8l3",
+    "primary": "LeRobot documentation",
     "secondary": "SO-101 hardware",
-    "deliverable": "Final video and project report",
+    "deliverable": "Run repeated pick-and-place trials; publish success rate, failure analysis and a demo.",
     "days": [
       {
-        "title": "Lecture and notes",
+        "title": "Learn",
         "hours": 1.5,
-        "task": "Study the primary resource. Write five key concepts and one question."
+        "task": "Study Capstone evaluation and demonstration. Write a short explanation and note the relevant units."
       },
       {
-        "title": "Reading and derivation",
+        "title": "Worked example",
         "hours": 1.5,
-        "task": "Read the secondary resource. Work through one mathematical or conceptual example."
+        "task": "Reproduce one worked example and verify the result."
       },
       {
-        "title": "Python lab",
+        "title": "Python practice",
         "hours": 2,
-        "task": "Implement a small working Python experiment related to this week's topic."
+        "task": "Run repeated pick-and-place trials; publish success rate, failure analysis and a demo."
       },
       {
-        "title": "Build and test",
+        "title": "Test and improve",
         "hours": 2,
-        "task": "Extend the lab into the weekly deliverable and add a repeatable test."
+        "task": "Run multiple scenarios, compare a baseline and document one failure."
       },
       {
         "title": "Review and commit",
         "hours": 1,
-        "task": "Document results, review mistakes, and commit your work."
+        "task": "Record observations, save results and commit code and notes."
       }
     ]
   }
