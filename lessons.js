@@ -245,10 +245,10 @@ const LESSONS=[
       "Test at least two cases, record results and explain one failure mode."
     ],
     "watch": {
-      "title": "MuJoCo Tutorial — Trossen Robotics",
-      "url": "https://www.youtube.com/watch?v=CfE8tC7p3vs",
+      "title": "Build a Custom Gymnasium Environment & Train with Stable Baselines3 — Johnny Code",
+      "url": "https://www.youtube.com/watch?v=AoGRjPt-vms",
       "type": "video",
-      "note": "Introductory simulation overview; use the official documentation for the hands-on task."
+      "note": "Covers reset/step, spaces, validation, and training; adapt the example to your reaching arm."
     }
   },
   {
@@ -305,7 +305,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Define state, action, transition and reward for reaching.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Custom Gymnasium RL Environment: State, Actions, Rewards — Johnny Code",
+      "url": "https://www.youtube.com/watch?v=AoGRjPt-vms",
+      "type": "video",
+      "note": "Focus on 00:43–12:47 for environment design, observation and action spaces."
+    }
   },
   {
     "id": "m3l2",
@@ -330,7 +336,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Train PPO on a simple continuous-control environment and plot learning curves.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Train a Balance Bot with PPO in MuJoCo — DigiKey",
+      "url": "https://www.digikey.com/en/videos/d/digi-key-electronics/reinforcement-learning-for-robotics-part-2",
+      "type": "video",
+      "note": "Robot-specific PPO training, reward functions and curriculum learning; example uses a balance robot, not an arm."
+    }
   },
   {
     "id": "m3l3",
@@ -380,7 +392,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Test sparse versus dense reaching rewards; log reward hacking cases.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Reward Design and PPO Training — DigiKey",
+      "url": "https://www.digikey.com/en/videos/d/digi-key-electronics/reinforcement-learning-for-robotics-part-2",
+      "type": "video",
+      "note": "Watch the reward design and curriculum-learning portions; compare reward to actual success."
+    }
   },
   {
     "id": "m4l1",
@@ -405,7 +423,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Capture images, inspect coordinate conventions and draw camera axes.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Camera Intrinsic and Extrinsic Calibration — OmArTronics",
+      "url": "https://www.youtube.com/watch?v=xkjiRBrQSVg",
+      "type": "video",
+      "note": "Focus on 02:55–11:15: pixels, camera calibration and reference frames."
+    }
   },
   {
     "id": "m4l2",
@@ -430,7 +454,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Use OpenCV to locate a colored object and report its image centroid.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "ArUco Object Detection with OpenCV — OmArTronics",
+      "url": "https://www.youtube.com/watch?v=xkjiRBrQSVg",
+      "type": "video",
+      "note": "Focus on 04:42–07:17: marker detection. This is fiducial detection, not neural segmentation."
+    }
   },
   {
     "id": "m4l3",
@@ -455,7 +485,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Back-project a depth pixel into 3D and transform it to a robot frame.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Convert Camera Pixels to Robot Coordinates — OmArTronics",
+      "url": "https://www.youtube.com/watch?v=xkjiRBrQSVg",
+      "type": "video",
+      "note": "Focus on 08:52–14:40: extrinsics and pose estimation."
+    }
   },
   {
     "id": "m4l4",
@@ -480,7 +516,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Build a simulated loop: detect target, estimate pose, command a reach.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Vision-Guided Pick-and-Place Pipeline — OmArTronics",
+      "url": "https://www.youtube.com/watch?v=xkjiRBrQSVg",
+      "type": "video",
+      "note": "Focus on 11:15–22:42: perception, grasping and simulation."
+    }
   },
   {
     "id": "m5l1",
@@ -507,10 +549,10 @@ const LESSONS=[
       "Test at least two cases, record results and explain one failure mode."
     ],
     "watch": {
-      "title": "IIT Kanpur — Lecture 08: Inverse Kinematics",
-      "url": "https://nptel.ac.in/courses/112104298",
-      "type": "lecture-index",
-      "note": "Find the named lecture in the official NPTEL course index; direct video URL not verified."
+      "title": "Inverse Kinematics Explained in a Robot Arm — OmArTronics",
+      "url": "https://www.youtube.com/watch?v=uoQdc1Idffc",
+      "type": "video",
+      "note": "Focus on 02:12–03:57 for a visual introduction to IK; NPTEL remains the mathematical reference."
     }
   },
   {
@@ -538,10 +580,10 @@ const LESSONS=[
       "Test at least two cases, record results and explain one failure mode."
     ],
     "watch": {
-      "title": "IIT Kanpur — Lecture 14: Trajectory Planning",
-      "url": "https://nptel.ac.in/courses/112104298",
-      "type": "lecture-index",
-      "note": "Find the named lecture in the official NPTEL course index; direct video URL not verified."
+      "title": "MoveIt 2 Motion Planning and Collision-Aware Paths — OmArTronics",
+      "url": "https://www.youtube.com/watch?v=uoQdc1Idffc",
+      "type": "video",
+      "note": "Focus on 03:57–18:12: planning, setup, simulation and Python motion API."
     }
   },
   {
@@ -567,7 +609,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Build a pick-lift-place sequence with gripper open/close actions.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Autonomous Robot Arm Pick-and-Place — OmArTronics",
+      "url": "https://www.youtube.com/watch?v=xkjiRBrQSVg",
+      "type": "video",
+      "note": "Focus on 14:40–22:42: grasp IK, approach and pick-and-place execution."
+    }
   },
   {
     "id": "m5l4",
@@ -592,7 +640,13 @@ const LESSONS=[
       "Work through one concrete example and identify the inputs, outputs and units.",
       "Implement the lab: Add recovery when an object moves or a grasp fails.",
       "Test at least two cases, record results and explain one failure mode."
-    ]
+    ],
+    "watch": {
+      "title": "Closed-Loop Vision-Guided Manipulation — OmArTronics",
+      "url": "https://www.youtube.com/watch?v=xkjiRBrQSVg",
+      "type": "video",
+      "note": "Focus on 19:16–27:09: simulation, hardware and troubleshooting."
+    }
   },
   {
     "id": "m6l1",
@@ -743,10 +797,10 @@ const LESSONS=[
       "Test at least two cases, record results and explain one failure mode."
     ],
     "watch": {
-      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
-      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
-      "type": "video",
-      "note": "General workflow overview; not a lesson-specific deep dive."
+      "title": "SmolVLA — official technical walkthrough (written, not a video)",
+      "url": "https://huggingface.co/docs/lerobot/v0.6.0/en/smolvla",
+      "type": "reference",
+      "note": "This is a lesson-specific written walkthrough; the earlier LeLab overview is not a SmolVLA tutorial."
     }
   },
   {
@@ -774,10 +828,10 @@ const LESSONS=[
       "Test at least two cases, record results and explain one failure mode."
     ],
     "watch": {
-      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
-      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
-      "type": "video",
-      "note": "General workflow overview; not a lesson-specific deep dive."
+      "title": "SmolVLA — official technical walkthrough (written, not a video)",
+      "url": "https://huggingface.co/docs/lerobot/v0.6.0/en/smolvla",
+      "type": "reference",
+      "note": "This is a lesson-specific written walkthrough; the earlier LeLab overview is not a SmolVLA tutorial."
     }
   },
   {
@@ -805,10 +859,10 @@ const LESSONS=[
       "Test at least two cases, record results and explain one failure mode."
     ],
     "watch": {
-      "title": "Train AI Robots Without Writing Code! (Introducing LeLab) — Hugging Face",
-      "url": "https://www.youtube.com/watch?v=VqyKUuW9V1g",
-      "type": "video",
-      "note": "General workflow overview; not a lesson-specific deep dive."
+      "title": "SmolVLA — official technical walkthrough (written, not a video)",
+      "url": "https://huggingface.co/docs/lerobot/v0.6.0/en/smolvla",
+      "type": "reference",
+      "note": "This is a lesson-specific written walkthrough; the earlier LeLab overview is not a SmolVLA tutorial."
     }
   },
   {
