@@ -335,31 +335,6 @@ const LESSONS=[
     ]
   },
   {
-    "id": "m3l5",
-    "module": 2,
-    "title": "Observation design and domain randomization",
-    "primary": "Gymnasium documentation",
-    "secondary": "MuJoCo documentation",
-    "lab": "Vary masses, camera noise and target positions; evaluate generalization.",
-    "quiz": {
-      "question": "What is the goal of domain randomization?",
-      "options": [
-        "Make training screenshots colorful",
-        "Improve robustness to variations",
-        "Remove the need for testing"
-      ],
-      "correct": 1
-    },
-    "minutes": 45,
-    "concept": "Policies can overfit a fixed simulator. Randomizing plausible conditions helps expose robustness gaps.",
-    "steps": [
-      "Study the relevant section of Gymnasium documentation; write down the observation, action and expected outcome.",
-      "Work through one concrete example and identify the inputs, outputs and units.",
-      "Implement the lab: Vary masses, camera noise and target positions; evaluate generalization.",
-      "Test at least two cases, record results and explain one failure mode."
-    ]
-  },
-  {
     "id": "m4l1",
     "module": 3,
     "title": "Camera images and calibration basics",
