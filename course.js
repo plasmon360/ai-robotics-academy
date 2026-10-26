@@ -498,7 +498,7 @@ const COURSE=[
     "week": 14,
     "phase": "Reinforcement Learning for Robots",
     "title": "Observation design and domain randomization",
-    "lessonId": "m3l5",
+    "lessonId": "m3l4",
     "primary": "Gymnasium documentation",
     "secondary": "MuJoCo documentation",
     "deliverable": "Vary masses, camera noise and target positions; evaluate generalization.",
